@@ -3,7 +3,7 @@
 stdenv.mkDerivation {
   name = "gen-giraffe-wallpaper";
   buildInputs = [
-    (haskellPackages.ghcWithPackages (p: [ p.turtle ]))
+    haskellPackages.ghc
     inkscape
     imagemagick
   ];
