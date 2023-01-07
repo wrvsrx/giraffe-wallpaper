@@ -1,5 +1,4 @@
-{ haskellPackages, inkscape, imagemagick, stdenv }:
-{ width, height }:
+{ haskellPackages, inkscape, imagemagick, stdenv, width ? 3840, height ? 2160 }:
 stdenv.mkDerivation {
   name = "gen-giraffe-wallpaper";
   buildInputs = [
