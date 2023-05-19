@@ -24,3 +24,5 @@ cabal.project.local~
 
 # nix build result
 result
+
+.direnv

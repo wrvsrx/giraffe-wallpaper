@@ -1,17 +1,17 @@
 {
-  description = "My wallpaper generator";
+  description = "flake template";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
+    nur-wrvsrx.url = "github:wrvsrx/nur-packages";
+    nixpkgs.follows = "nur-wrvsrx/nixpkgs";
+    flake-parts.follows = "nur-wrvsrx/flake-parts";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-      in rec {
-        packages.default = pkgs.callPackage ./default.nix { };
-        devShell = pkgs.mkShell { inputsFrom = [ packages.default ]; };
-      }
-    );
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+    systems = [ "x86_64-linux" ];
+    perSystem = { pkgs, ... }: rec {
+      packages.default = pkgs.callPackage ./default.nix { };
+      devShells.default = pkgs.mkShell { inputsFrom = [ packages.default ]; };
+    };
+  };
 }
