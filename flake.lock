@@ -3,16 +3,15 @@
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
-          "nur-wrvsrx",
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1682984683,
-        "narHash": "sha256-fSMthG+tp60AHhNmaHc4StT3ltfHkQsJtN8GhfLWmtI=",
+        "lastModified": 1743550720,
+        "narHash": "sha256-hIshGgKZCgWh6AYJpJmRgFdR3WUbkY04o82X05xqQiY=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "86684881e184f41aa322e653880e497b66429f3e",
+        "rev": "c621e8422220273271f52058f618c94e405bb0f5",
         "type": "github"
       },
       "original": {
@@ -23,50 +22,24 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1683020768,
-        "narHash": "sha256-ZyZl6k9NWS5QPwD3NoAVz/eSgodQDvl+y+fu8MVbrHc=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "44f30edf5661d86fb3a95841c35127f3d0ea8b0f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nur-wrvsrx": {
-      "inputs": {
-        "flake-parts": "flake-parts",
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1684323974,
-        "narHash": "sha256-sn5bncd7W707DTw+Q/KVR1/iZ/u7WYUcBmCEff/62/0=",
+        "lastModified": 1743843026,
+        "narHash": "sha256-THV1sb42gQCgX3lM2c6pyMp0vTLcCf/ZVoX+DPh2+rM=",
         "owner": "wrvsrx",
-        "repo": "nur-packages",
-        "rev": "2fbbe8f9d18ba12d5256c3436b8f930a84b59fa7",
+        "repo": "nixpkgs",
+        "rev": "73458d38c9e788260327a8c4c839ae4b638df290",
         "type": "github"
       },
       "original": {
         "owner": "wrvsrx",
-        "repo": "nur-packages",
+        "ref": "patched-nixos-unstable",
+        "repo": "nixpkgs",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "flake-parts": [
-          "nur-wrvsrx",
-          "flake-parts"
-        ],
-        "nixpkgs": [
-          "nur-wrvsrx",
-          "nixpkgs"
-        ],
-        "nur-wrvsrx": "nur-wrvsrx"
+        "flake-parts": "flake-parts",
+        "nixpkgs": "nixpkgs"
       }
     }
   },
